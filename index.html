@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Raafe!</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<style>
+/* GENERAL */
+body {
+    font-family:'Playfair Display', serif;
+    margin:0;
+    padding:0;
+    background:#fce4ec;
+    color:#444;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+.animation-container {
+    width:100%;
+    height:300px;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg,#ffc4e2,#a4e3ff,#ffefc4);
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+.gradient-header {
+    text-align:center;
+    padding-top:50px;
+    position:relative;
+    z-index:10;
+}
+.main-title {
+    font-family:'Pacifico',cursive;
+    color:#fff;
+    font-size:4.5em;
+    text-shadow:2px 2px 4px rgba(0,0,0,.3);
+    margin:0;
+}
+.glow-name {
+    color:#fff;
+    text-shadow:0 0 10px #ff69b4,0 0 20px #ff99aa,0 0 30px #ffb3c6;
+    animation:glow 2s infinite alternate;
+}
+@keyframes glow {
+    0% { text-shadow:0 0 10px #ff69b4,0 0 20px #ff99aa,0 0 30px #ffb3c6; }
+    100% { text-shadow:0 0 20px #ff69b4,0 0 30px #ff99aa,0 0 40px #ffb3c6; }
+}
+
+/* COUNTING BLOCK */
+.counting-block-container {
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    border-radius:10px;
+    background:linear-gradient(135deg,#ff69b4,#ffc4e2);
+    box-shadow:0 4px 6px rgba(0,0,0,.2),0 0 15px rgba(255,255,255,.5) inset;
+    animation:pulse 2s infinite alternate;
+}
+.counting-text {
+    font-size:1.2em;
+    font-weight:bold;
+    color:#fff;
+    text-shadow:1px 1px 2px rgba(0,0,0,.3);
+    margin:0 5px;
+}
+.counting-number {
+    font-family:'Pacifico',cursive;
+    font-size:3em;
+    font-weight:bold;
+    color:#fff;
+    padding:0 10px;
+    border-radius:5px;
+    text-shadow:3px 3px 5px rgba(0,0,0,.5);
+    background:rgba(255,255,255,.1);
+}
+
+/* LETTER */
+.content-wrapper {
+    position:relative;
+    max-width:700px;
+    margin:-100px auto 50px;
+    padding:20px;
+    z-index:5;
+}
+.letter-container {
+    max-width:600px;
+    padding:30px 40px;
+    background: rgba(255,182,193,0.65);
+    border-radius:15px;
+    margin:0 auto;
+    backdrop-filter: blur(4px);
+    box-shadow:8px 8px 0 rgba(255,192,203,.6),0 0 25px rgba(0,0,0,.1);
+    transform:perspective(800px) rotateX(1deg) rotateY(-1deg);
+    animation:fadeIn 1.5s ease;
+    position:relative;
+}
+.letter-container::before {
+    content:"✨✨";
+    position:absolute;
+    top:-10px;
+    right:10px;
+    font-size:1.5em;
+    animation:sparkleAnim 2s infinite alternate;
+}
+@keyframes sparkleAnim {
+    0%{opacity:0.2}
+    50%{opacity:1}
+    100%{opacity:0.2}
+}
+
+/* PHOTO FRAMES */
+.frames-section {
+    margin-top:50px;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+.photo-frame {
+    width:160px;
+    background:white;
+    padding:8px;
+    border-radius:10px;
+    box-shadow:0 8px 15px rgba(0,0,0,0.2);
+    position:relative;
+    animation:swing 3s ease-in-out infinite;
+    transform-origin:top center;
+}
+.photo-frame img {
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    border-radius:6px;
+}
+.photo-caption {
+    font-family: 'Pacifico', cursive;
+    text-align:center;
+    font-size:1em;
+    margin-top:6px;
+    color:#ff69b4;
+}
+@keyframes swing {
+    0%{transform:rotate(0deg);}
+    50%{transform:rotate(3deg);}
+    100%{transform:rotate(0deg);}
+}
+
+/* BUBBLES */
+.bubble{
+    position:absolute;
+    bottom:-100px;
+    width:40px;
+    height:40px;
+    background:rgba(255,255,255,.5);
+    border-radius:50%;
+    box-shadow:0 0 10px rgba(255,255,255,.5),inset 0 0 5px rgba(255,255,255,.8);
+    opacity:.8;
+    animation:rise 15s infinite ease-in-out;
+}
+@keyframes rise{
+    0%{transform:translateY(0) scale(1);opacity:0}
+    50%{opacity:1}
+    100%{transform:translateY(-300px) scale(1.5);opacity:0}
+}
+.x1{left:10%;animation-delay:2s;width:60px;height:60px}
+.x2{left:20%;animation-delay:4s;width:30px;height:30px}
+.x3{left:25%;animation-delay:1s;width:50px;height:50px}
+.x4{left:40%;animation-delay:3s;width:45px;height:45px}
+.x5{left:55%;animation-delay:5s;width:70px;height:70px}
+.x6{left:65%;animation-delay:2.5s;width:20px;height:20px}
+.x7{left:70%;animation-delay:6s;width:55px;height:55px}
+.x8{left:80%;animation-delay:3.5s;width:35px;height:35px}
+.x9{left:90%;animation-delay:7s;width:40px;height:40px}
+.x10{left:5%;animation-delay:0s;width:50px;height:50px}
+
+/* HEART FLOATING */
+.heart{
+    position:fixed;
+    bottom:-10px;
+    color:#ff6fa8;
+    font-size:20px;
+    animation:floatUp 4s linear forwards;
+    pointer-events:none;
+}
+@keyframes floatUp{
+    0%{opacity:1;transform:translateY(0) scale(1)}
+    100%{opacity:0;transform:translateY(-200px) scale(1.8)}
+}
+
+/* ANIMATIONS */
+@keyframes pulse{0%{transform:scale(1)}100%{transform:scale(1.05)}}
+@keyframes fadeIn{0%{opacity:0;transform:translateY(40px)}100%{opacity:1;transform:translateY(0)}}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .main-title{font-size:3em}
+    .content-wrapper{margin:-50px auto 30px}
+    .letter-container{max-width:90%;transform:none;box-shadow:0 0 15px rgba(0,0,0,.1)}
+    .photo-frame{width:120px}
+    .photo-frame img{height:100px}
+    .bubble{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="animation-container">
+<header class="gradient-header">
+<h1 class="main-title">Happy Birthday <span class="glow-name">Raafe</span>!</h1>
+<div class="counting-block-container">
+<span class="counting-text">Happy</span>
+<span class="counting-number">26</span>
+<span class="counting-text">Years!</span>
+</div>
+</header>
+<br>
+<br>
+<div class="bubbles-wrap">
+<div class="bubble x1"></div><div class="bubble x2"></div><div class="bubble x3"></div>
+<div class="bubble x4"></div><div class="bubble x5"></div><div class="bubble x6"></div>
+<div class="bubble x7"></div><div class="bubble x8"></div><div class="bubble x9"></div>
+<div class="bubble x10"></div>
+</div>
+</div>
+
+<main class="content-wrapper">
+<br>
+<br>
+<div class="letter-container">
+<h2>Happy Birthday, my love. ❤️</h2>
+
+<p>My dearest <span class="glow-name">Raafe</span>,</p>
+
+<p>On your special day, I want to tell you something I carry with me every single moment—  
+<b>no matter what happens, I will stay with you.</b> Through distance, through life’s ups and downs, through everything we face… my heart always chooses you.</p>
+
+<p>I am endlessly grateful for you—your love, your patience, your strength, and the way you make me feel safe even from miles away. You’ve given my life a kind of peace and magic I never expected, and I cherish you more than words can ever say.</p>
+
+<p>Let’s live our life exactly the way we dreamed—fearlessly, lovingly, and together. I want to build every tomorrow with you, laugh with you, grow with you, and love you in ways that only deepen with time.</p>
+
+<p>You deserve happiness that overflows, love that surrounds you, and a life as extraordinary as your heart.</p>
+
+<p>On your birthday and every day,  
+<b>I love you more than anything, <span class="glow-name">Raafe</span>.</b></p>
+
+<p>With all my love,  
+<br>— Minnu</p>
+</div>
+
+<div class="frames-section">
+    <div class="photo-frame">
+        <img src="one.jpeg">
+        <div class="photo-caption">My Pretty Boy</div>
+        <span class="sparkle" style="top:-10px; left:-10px;">✨</span>
+        <span class="sparkle" style="top:20px; right:-15px;">💫</span>
+        <span class="sparkle" style="bottom:-10px; left:40%;">✨</span>
+    </div>
+    <div class="photo-frame">
+        <img src="two.jpeg">
+        <div class="photo-caption">My Handsome</div>
+        <span class="sparkle" style="top:-10px; left:-10px;">✨</span>
+        <span class="sparkle" style="top:20px; right:-15px;">💫</span>
+        <span class="sparkle" style="bottom:-10px; left:40%;">✨</span>
+    </div>
+    <div class="photo-frame">
+        <img src="three.jpeg">
+        <div class="photo-caption">Lovely</div>
+        <span class="sparkle" style="top:-10px; left:-10px;">✨</span>
+        <span class="sparkle" style="top:20px; right:-15px;">💫</span>
+        <span class="sparkle" style="bottom:-10px; left:40%;">✨</span>
+    </div>
+</div>
+</main>
+
+<script>
+// Floating hearts
+document.addEventListener("mousemove", e => {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.style.left = e.pageX + "px";
+    heart.style.top = e.pageY + "px";
+    heart.innerHTML = "❤";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),3000);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* GENERAL */
+body{font-family:'Playfair Display',serif;margin:0;padding:0;background:#fce4ec;color:#444;line-height:1.6;overflow-x:hidden}
+
+/* HEADER */
+.animation-container{width:100%;height:300px;position:relative;overflow:hidden;background:linear-gradient(135deg,#ffc4e2,#a4e3ff,#ffefc4);box-shadow:0 4px 10px rgba(0,0,0,.1)}
+.gradient-header{text-align:center;padding-top:50px;position:relative;z-index:10}
+.main-title{font-family:'Pacifico',cursive;color:#fff;font-size:4.5em;text-shadow:2px 2px 4px rgba(0,0,0,.3);margin:0}
+
+/* COUNTING BLOCK */
+.counting-block-container{display:inline-block;margin-top:20px;padding:10px 20px;border-radius:10px;background:linear-gradient(135deg,#ff69b4,#ffc4e2);box-shadow:0 4px 6px rgba(0,0,0,.2),0 0 15px rgba(255,255,255,.5) inset;animation:pulse 2s infinite alternate}
+.counting-text{font-size:1.2em;font-weight:bold;color:#fff;text-shadow:1px 1px 2px rgba(0,0,0,.3);margin:0 5px}
+.counting-number{font-family:'Pacifico',cursive;font-size:3em;font-weight:bold;color:#fff;padding:0 10px;border-radius:5px;text-shadow:3px 3px 5px rgba(0,0,0,.5);background:rgba(255,255,255,.1)}
+
+/* LETTER */
+.content-wrapper{position:relative;max-width:1200px;margin:-100px auto 50px;padding:20px;z-index:5}
+.letter-container{max-width:600px;padding:30px 40px;background:#fff;border-radius:15px;margin:0 auto;box-shadow:8px 8px 0 rgba(255,192,203,.5),0 0 25px rgba(0,0,0,.1);transform:perspective(800px) rotateX(1deg) rotateY(-1deg);animation:fadeIn 1.5s ease}
+.letter-container h2{text-align:center;font-size:1.5em;color:#e91e63;border-bottom:2px solid #ff99aa;padding-bottom:10px;margin-bottom:20px}
+.letter-container{
+    max-width:600px;
+    padding:30px 40px;
+    background: rgba(255,182,193,0.65); /* soft light pink with transparency */
+    border-radius:15px;
+    margin:0 auto;
+    backdrop-filter: blur(4px); /* optional: gives a smooth glassy glow */
+    box-shadow:8px 8px 0 rgba(255,192,203,0.6),0 0 25px rgba(0,0,0,.1);
+    transform:perspective(800px) rotateX(1deg) rotateY(-1deg);
+    animation:fadeIn 1.5s ease;
+}
+
+/* PHOTOS */
+.photo{position:absolute;width:150px;height:150px;object-fit:cover;border-radius:50%;box-shadow:0 5px 10px rgba(0,0,0,.2);z-index:15;border:5px solid #fff}
+.photo-single{top:100px;right:50px;width:120px;height:120px;border-color:#ff99aa;transform:rotate(5deg)}
+
+.photos-container{position:absolute;top:500px;left:50%;transform:translateX(-50%);width:100%;min-height:500px}
+.p-left-top{left:20%;top:100px;border-color:#ff99aa;transform:rotate(-10deg)}
+.p-right-middle{left:60%;top:150px;border-color:#a4e3ff;transform:rotate(15deg)}
+.p-right-gras{left:70%;top:300px;border-color:#ffefc4;transform:rotate(0deg)}
+
+/* BUBBLES */
+.bubble{position:absolute;bottom:-100px;width:40px;height:40px;background:rgba(255,255,255,.5);border-radius:50%;box-shadow:0 0 10px rgba(255,255,255,.5),inset 0 0 5px rgba(255,255,255,.8);opacity:.8;animation:rise 15s infinite ease-in-out}
+@keyframes rise{0%{transform:translateY(0) scale(1);opacity:0}50%{opacity:1}100%{transform:translateY(-300px) scale(1.5);opacity:0}}
+.x1{left:10%;animation-delay:2s;width:60px;height:60px}.x2{left:20%;animation-delay:4s;width:30px;height:30px}.x3{left:25%;animation-delay:1s;width:50px;height:50px}.x4{left:40%;animation-delay:3s;width:45px;height:45px}.x5{left:55%;animation-delay:5s;width:70px;height:70px}.x6{left:65%;animation-delay:2.5s;width:20px;height:20px}.x7{left:70%;animation-delay:6s;width:55px;height:55px}.x8{left:80%;animation-delay:3.5s;width:35px;height:35px}.x9{left:90%;animation-delay:7s;width:40px;height:40px}.x10{left:5%;animation-delay:0s;width:50px;height:50px}
+
+/* CONFETTI OVERLAY */
+.animation-container::before,.animation-container::after{content:'';position:absolute;width:100%;height:100%;pointer-events:none;background-size:100px 100px;opacity:.5;z-index:5;background-image:radial-gradient(circle at 10% 20%,#ff69b4 2px,transparent 2px),radial-gradient(circle at 70% 80%,#a4e3ff 2px,transparent 2px),radial-gradient(circle at 50% 50%,#ffefc4 2px,transparent 2px)}
+.animation-container::after{background-size:80px 80px;opacity:.4;background-position:50px 50px;transform:rotate(10deg)}
+
+@keyframes pulse{0%{transform:scale(1)}100%{transform:scale(1.05)}}
+@keyframes fadeIn{0%{opacity:0;transform:translateY(40px)}100%{opacity:1;transform:translateY(0)}}
+
+/* HEART FLOATING ANIMATION */
+.heart{position:fixed;bottom:-10px;color:#ff6fa8;font-size:20px;animation:floatUp 4s linear forwards;pointer-events:none}
+@keyframes floatUp{0%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0;transform:translateY(-200px) scale(1.8)}}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.main-title{font-size:3em}
+.content-wrapper{margin:-50px auto 30px}
+.letter-container{max-width:90%;transform:none;box-shadow:0 0 15px rgba(0,0,0,.1)}
+.photo-single,.photos-container,.bubble{display:none}}
+
+/* === PHOTO FRAMES (Standing Polaroid Style) === */
+/* === COLORFUL RAINBOW AURA FOR POLAROID FRAMES === */
+.photo-frame {
+    position: relative;
+    overflow: visible;
+}
+
+.photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 14px;
+    background: linear-gradient(
+        135deg,
+        #ff69b4,
+        #ffdd55,
+        #7df3ff,
+        #b88cff,
+        #ff8aa6
+    );
+    z-index: -1;
+    filter: blur(8px);
+    animation: auraGlow 4s linear infinite;
+}
+
+@keyframes auraGlow {
+    0% { filter: blur(8px) brightness(1); }
+    50% { filter: blur(12px) brightness(1.3); }
+    100% { filter: blur(8px) brightness(1); }
+}
+
+/* === RIBBON / BOW ON TOP OF EACH PHOTO === */
+/* === PHOTO FRAMES (Perfect Cute Polaroid Size) === */
+.frames-section {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.photo-frame {
+    width: 160px;                 /* smaller */
+    background: white;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    position: relative;
+    animation: swing 3s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 140px;               /* reduced height */
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.photo-caption {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 6px;
+    color: #ff69b4;
+}
+
+/* Swing Animation */
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(3deg); }
+    100% { transform: rotate(0deg); }
+}
